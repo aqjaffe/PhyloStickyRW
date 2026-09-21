@@ -5,16 +5,15 @@ animated companion to the first:
 
   1. The BHV Frechet (Sturm) mean of the 424 gene trees, drawn as a black-and-
      white phylogram with the fixed-x = cumulative-branch-length layout
-     (formerly ``draw_primate_mean.py``).            -> eutheria_mean.{pdf,png}
+                                                      -> eutheria_mean.{pdf,png}
 
   1b. An animated version of (1): the running Frechet mean tree F_n for
       n = 10, ..., 424, taxa held at (1)'s fixed row order throughout
-      (formerly the standalone eutheria_mean_animation.py).
-                                                      -> eutheria_mean_animation.gif
+                                                  -> eutheria_mean_animation.gif
 
   2. Folded random walks at the internal {Primates, Glires, Tree Shrew}
      trifurcation -- a codimension-1 stratum of *rooted* BHV tree space
-     (formerly ``folded_walks_internal.py``).        -> eutheria_RW.{pdf,png}
+                                                   -> eutheria_RW.{pdf,png}
 
 The random-walk panel is drawn with the shared paper style used by the
 simulation figures (``bhv_simulation_*`` / ``spider_simulation_*``): each folded
@@ -81,11 +80,11 @@ TRIF_LEAVES = A | B | C                                       # MRCA = trifurcat
 
 
 # ===========================================================================
-# FIGURE 1: Frechet mean phylogram (black & white)  (was draw_primate_mean.py)
+# FIGURE 1: Frechet mean phylogram (black & white)
 # ===========================================================================
 mu = bm.frechet_mean(trees, max_epochs=MAX_EPOCHS, seed=SEED)
 
-# drop (collapse) internal edges below tolerance -> multifurcations
+# drop internal edges below tolerance -> multifurcations
 drawn = mu.copy()
 drawn.clades = {m: l for m, l in drawn.clades.items() if l >= COLLAPSE_TOL}
 root = _parse_newick_string(drawn.to_newick())
