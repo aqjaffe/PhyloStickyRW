@@ -1,0 +1,7 @@
+# Runtime dependencies for the figure scripts and the booktools package.
+# (The bhvtools package itself is pure standard library and needs none of these.)
+numpy>=1.20
+matplotlib>=3.5
+
+# For the test suite:
+#   pip install pytest
