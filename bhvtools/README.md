@@ -1,7 +1,7 @@
 # bhvtools
 
-Pure-Python computation of **Fréchet (Karcher) means of rooted phylogenetic
-trees in the BHV metric**. No external dependencies (standard library only;
+Pure-Python computation of Fréchet means of rooted phylogenetic
+trees in the BHV metric. No external dependencies (standard library only;
 Python ≥ 3.9). A from-scratch port of the geodesic machinery in Megan Owen's
 `treestats`.
 
